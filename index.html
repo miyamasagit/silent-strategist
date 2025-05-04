@@ -3,17 +3,18 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Silent Strategist - GitHub Pages版</title>
+  <title>Silent Strategist - 銀河背景 完全版</title>
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
+      background-image: url('https://cdn.pixabay.com/photo/2020/01/20/12/57/lake-4779688_1280.jpg');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       color: white;
       padding: 2rem;
       min-height: 100vh;
-      background-color: black;
     }
     #container {
       background-color: rgba(0, 0, 0, 0.5);
@@ -47,18 +48,6 @@
     <button onclick="saveAnswer()">保存</button>
   </div>
   <script>
-    const cdnImages = [
-      "https://cdn.pixabay.com/photo/2020/01/20/12/57/lake-4779688_1280.jpg",
-      "https://cdn.pixabay.com/photo/2016/11/29/03/53/mountains-1867273_1280.jpg",
-      "https://cdn.pixabay.com/photo/2015/03/26/09/54/sunset-690848_1280.jpg",
-      "https://cdn.pixabay.com/photo/2017/08/01/08/29/lake-2561681_1280.jpg",
-      "https://cdn.pixabay.com/photo/2017/06/20/21/44/road-2427181_1280.jpg"
-    ];
-    const today = new Date();
-    const day = today.getDate() % cdnImages.length;
-    const imageUrl = cdnImages[day];
-    document.body.style.backgroundImage = "url('" + imageUrl + "')";
-
     function saveAnswer() {
       const text = document.getElementById("answer").value;
       const key = "silent_" + new Date().toISOString().slice(0, 10);
